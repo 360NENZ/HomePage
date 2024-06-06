@@ -103,8 +103,8 @@
     
     <script src="https://cdn.tomys.top/myindex/assets/js/main.js"></script>
     </section>
-  <script src="https://cdn.tomys.top/myindex/videobg/bideo.js"></script>
-  <!--
+  <!--<script src="https://cdn.tomys.top/myindex/videobg/bideo.js"></script>
+  
   <script>
     (function () {
     var bv = new Bideo();
