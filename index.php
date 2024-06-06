@@ -3,14 +3,14 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>TomyJan</title>
+    <title>360NENZ</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="keywords" content="TomyJan,荼蘼,主页">
-    <meta name="description" content="TomyJan的个人主页">
+    <meta name="keywords" content="360NENZ,主页">
+    <meta name="description" content="360NENZ的个人主页">
     <link rel="stylesheet" href="https://cdn.tomys.top/common/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="icon" type="image/x-icon" href="https://cdn.tomys.top/common/img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.tomys.top/myindex/assets/css/main.css">
@@ -74,18 +74,19 @@
 
 <body>
   <div id="container">
-      <video id="background_video" loop muted>你的浏览器好像不支持内嵌视频诶，换个浏览器或者点击<a href="https://tomys.top/index_old.php" target="_blank">这里</a>访问旧版本吧~</video>
+      <!--
+      <video id="background_video" loop muted>你的浏览器好像不支持内嵌视频诶，换个浏览器或者点击<a href="/index_old.php" target="_blank">这里</a>访问旧版本吧~</video>
       <!-- #video_cover 是默认的视频封面 -->
-      <div id="video_cover"></div>
+      <!--<div id="video_cover"></div>
       <!-- #overlay 遮罩层 -->
-      <div id="overlay"></div>
+      <!--<div id="overlay"></div>
       <!-- #video_controls 用来控制视频静音、取消静音 -->
 
-      <div id="video_controls">
+      <!--<div id="video_controls">
         <span id="mute" style="background-repeat: no-repeat;">
           <img src="https://cdn.tomys.top/myindex/videobg/blank.png">
         </span>
-      </div>
+      </div>-->
       <!-- section 中添加任意你想展示的HTML内容 -->
       <section id="main_content">
       <div class="loading" >
@@ -103,14 +104,15 @@
     <script src="https://cdn.tomys.top/myindex/assets/js/main.js"></script>
     </section>
   <script src="https://cdn.tomys.top/myindex/videobg/bideo.js"></script>
+  <!--
   <script>
     (function () {
     var bv = new Bideo();
     //视频背景直链数组 rain 心火
     var videoUrls = [
-        'https://mirror.tomys.top/d/189Cloud/tomyjan-websites/static/video/av95473051_%E2%80%9CDo%20You%20Like%20Rain%E2%80%9D%20%E2%80%9CI%20Prefer%20You%E2%80%9D_2K.mp4?sign=l7jUsLmGNnZbujtD4HeXqEA4MvC2lcFOFn1dKl3WXV8=:0',
-        'https://mirror.tomys.top/d/189Cloud/tomyjan-websites/static/video/av802039278_%E2%80%9C%E8%8B%A5%E5%BF%83%E7%81%AB%E7%BB%9A%E7%83%82%EF%BC%8C%E4%BA%BA%E4%BA%A6%E4%B8%8E%E7%83%9F%E8%8A%B1%E5%85%B1%E6%9F%93%E2%80%9D_2K.mp4?sign=yBhJNT5F7L9uTdZYuNCfM1YLpb8vI9GTtgrwLkC3cts=:0',
-	'https://mirror.tomys.top/d/189Cloud/tomyjan-websites/static/video/av89474889_%E8%8D%A7%E4%B9%8B%E6%A3%AE.mp4?sign=n6T4tRGOT-ybnsTZnUKvAJ87Ss1RlLuiE_YGtkgzBi0=:0'
+        'https://mirror.tomys.top/d/189Cloud/360NENZ-websites/static/video/av95473051_%E2%80%9CDo%20You%20Like%20Rain%E2%80%9D%20%E2%80%9CI%20Prefer%20You%E2%80%9D_2K.mp4?sign=l7jUsLmGNnZbujtD4HeXqEA4MvC2lcFOFn1dKl3WXV8=:0',
+        'https://mirror.tomys.top/d/189Cloud/360NENZ-websites/static/video/av802039278_%E2%80%9C%E8%8B%A5%E5%BF%83%E7%81%AB%E7%BB%9A%E7%83%82%EF%BC%8C%E4%BA%BA%E4%BA%A6%E4%B8%8E%E7%83%9F%E8%8A%B1%E5%85%B1%E6%9F%93%E2%80%9D_2K.mp4?sign=yBhJNT5F7L9uTdZYuNCfM1YLpb8vI9GTtgrwLkC3cts=:0',
+	'https://mirror.tomys.top/d/189Cloud/360NENZ-websites/static/video/av89474889_%E8%8D%A7%E4%B9%8B%E6%A3%AE.mp4?sign=n6T4tRGOT-ybnsTZnUKvAJ87Ss1RlLuiE_YGtkgzBi0=:0'
         ];
     var videoUrl = videoUrls[Math.floor(Math.random()*videoUrls.length)];
     bv.init({
@@ -140,6 +142,6 @@
       }
     });
   }());
-  </script>
+  </script>-->
 </body>
 </html>

@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>TomyJan</title>
+    <title>360NENZ</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="keywords" content="TomyJan,荼蘼,主页">
-    <meta name="description" content="TomyJan的个人主页">
+    <meta name="keywords" content="360NENZ,主页">
+    <meta name="description" content="360NENZ的个人主页">
     <link rel="stylesheet" href="https://cdn.tomys.top/common/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="icon" type="image/x-icon" href="https://cdn.tomys.top/common/img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.tomys.top/myindex/assets/css/main.css">
