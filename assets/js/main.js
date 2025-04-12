@@ -38,7 +38,7 @@ function getAchives() {
 
 function getHitokoto() {
     $.ajax({
-        url: "https://v1.hitokoto.cn/",
+        url: "https://api.360nenz.top/api/hitokoto",
         dataType: "json",
         success: function (result) {
             write(result.hitokoto + " —— " + result.from);
