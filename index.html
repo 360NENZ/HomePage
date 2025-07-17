@@ -22,8 +22,105 @@
     <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-10-y/aplayer/1.10.1/APlayer.min.js"></script>
 	<link rel="stylesheet" href="https://scdn.星.fun/icp.css">
     
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: MiSans;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+
+    #loading-overlay::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: calc(100% + 100px);
+      height: calc(100% + 100px);
+      background-color: rgba(0, 0, 0, 0.9);
+      background-image: url('https://api.tomys.top/api/acgimg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    .loading-spinner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80px;
+    }
+
+    .loading-spinner div {
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out;
+    }
+
+    .loading-spinner div:nth-child(2) {
+      animation-delay: -0.32s;
+    }
+
+    .loading-spinner div:nth-child(3) {
+      animation-delay: -0.16s;
+    }
+
+    @keyframes bounce {
+      0%,
+      80%,
+      100% {
+        transform: scale(0);
+      }
+
+      40% {
+        transform: scale(1);
+      }
+    }
+
+    #loading-text {
+      margin-top: 100px;
+      text-align: center;
+      color: white;
+      font-size: 1.6em;
+    }
+
+    /* 深色模式使用不同的背景 */
+    @media (prefers-color-scheme: dark) {
+      #loading-overlay::before {
+        background-image: url('https://api.tomys.top/api/acgimg');
+      }
+    }
+
+    </style>
+    
     <!--移动端识别开始-->
-    <meta http-equiv="mobile-agent" content="format=xhtml;url=index_old.html">
+    <!--<meta http-equiv="mobile-agent" content="format=xhtml;url=index_old.html">
     <script type="text/javascript">
 	if(window.location.toString().indexOf('pref=padindex') != -1)
 	{}
@@ -38,10 +135,10 @@
 		if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
 		{window.location.href="index_old.html";}
 		else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}
-    </script>
+    </script>-->
     <!--移动端识别结束-->
     
-    <style type="text/css">
+   <!-- <style type="text/css">
         a:link {color:#FFFFFF;}      /* 未访问链接*/
         a:visited {color:#FFFFFF;}  /* 已访问链接 */
         a:hover {color:#00FBFF;}  /* 鼠标移动到链接上 */
@@ -57,7 +154,7 @@
         #overlay {position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: rgba(0,0,0,0.5);}
         #video_controls {position: absolute; left: 96%; top: 92%; transform: translate(-50%, 0);}
         #mute img {width: 23px; height: 23px; background: url('./assets/videobg/blank.png') no-repeat; background-size: cover; background-position: center;}
-    </style>
+    </style>-->
     
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1319bd77-945d-4801-9418-d9f395c2a00a"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
