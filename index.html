@@ -426,7 +426,7 @@
               |&nbsp;<a href="https://status.360nenz.top/" target="_blank">运行状态</a>
             </div>
             <!-- 备案链接组 -->
-            <div class="icp-links" id="links-tomys-top">
+            <div class="icp-links" id="links-360nenz-top">
               <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20243000" target="_blank"> 20243000号</a>
               |&nbsp;<a href="https://icp.星.fun/id.php?keyword=20250101" target="_blank">团ICP备20250101号</a>
               |&nbsp;<a href="https://icp.wudu.ltd/id.php?keyword=10000000" target="_blank">雾ICP备10000000号</a>
@@ -488,5 +488,24 @@
       }());
     </script>
   </div>
+
+  <script>
+    // 页面加载完成后移除遮罩, 显示内容, 动态调整备案号
+    window.addEventListener('load', () => {
+      document.getElementById('loading-overlay').style.display = 'none';
+      document.getElementById('container').style.display = 'block';
+      const hostname = document.referrer ? new URL(document.referrer).hostname : window.location.hostname;
+      if (hostname.endsWith('360nenz.top')) {
+        document.getElementById('links-360nenz-top').style.display = 'block';
+      } else if (hostname.endsWith('eu.org')) {
+        document.getElementById('links-nothing').style.display = 'block';
+      } else if (hostname.includes('localhost') || hostname.includes('127.0.0.') || hostname.includes('10.0.') || hostname.includes('10.1.') || hostname.includes('172.0.')) {
+        document.getElementById('links-local').style.display = 'block';
+      } else {
+        document.getElementById('links-unk').style.display = 'block';
+      }
+    });
+  </script>
 </body>
+
 </html>
