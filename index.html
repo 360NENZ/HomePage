@@ -312,13 +312,15 @@
                 </div>
             </section>
             <section id="donate">
-                <h1>拯救吃土的 360NENZ</h1>
-                <p>
-                    <br>
-                    贫穷限制了我的想象力，创造力，巧克力。<br>
-                    希望您帮我摆脱贫穷。<br>
-                    <br><a href="https://donate.360nenz.top/" title="360NENZ"><font color="black">Bro, Could U Click HERE?</font></a>
-                </p>
+              <h1>拯救吃土的 360NENZ</h1>
+              <p>
+                <br>
+                贫穷限制了我的想象力，创造力，巧克力。<br>
+                希望您帮我摆脱贫穷。<br>
+                <br><a href="https://donate.360nenz.top/" target="_blank" title="救救360NENZ吧">
+                  <font color="black">Bro, Could U Click HERE?</font>
+                </a>
+              </p>
             </section>
             <!--<section id="donate">
                 <h1>求投食喵 !</h1>
@@ -328,47 +330,81 @@
                     </a>
                 </div>
             </section>-->
+          </div>
         </div>
-    </div>
-    <footer>
-    <br />
-    <p id="hitokoto">Loading...</p>
-    <br />
+        <footer>
+          <br />
+          <p id="hitokoto">Loading...</p>
+          <br />
     
     
-    <div id="hitokoto">
-<div>
+          <div>
+            <div>
 
-<!--下面是运行时间统计代码-->
-<script>
-    function secondToDate(second) {
-        if (!second) {
-                return 0;
+              <!--下面是运行时间统计代码-->
+              <script>
+                function secondToDate(second) {
+                  if (!second) {
+                    return 0;
+                  }
+                  var time = new Array(0, 0, 0, 0, 0);
+                  if (second >= 365 * 24 * 3600) {
+                    time[0] = parseInt(second / (365 * 24 * 3600));
+                    second %= 365 * 24 * 3600;
+                  }
+                  if (second >= 24 * 3600) {
+                    time[1] = parseInt(second / (24 * 3600));
+                    second %= 24 * 3600;
+                  }
+                  if (second >= 3600) {
+                    time[2] = parseInt(second / 3600);
+                    second %= 3600;
+                  }
+                  if (second >= 60) {
+                    time[3] = parseInt(second / 60);
+                    second %= 60;
+                  }
+                  if (second > 0) {
+                    time[4] = second;
+                  }
+                  return time;
                 }
-        var time = new Array(0, 0, 0, 0, 0);
-        if (second >= 365 * 24 * 3600) {
-            time[0] = parseInt(second / (365 * 24 * 3600));
-            second %= 365 * 24 * 3600;
-            }
-        if (second >= 24 * 3600) {
-            time[1] = parseInt(second / (24 * 3600));
-            second %= 24 * 3600;
-            }
-        if (second >= 3600) {
-            time[2] = parseInt(second / 3600);
-            second %= 3600;
-            }
-        if (second >= 60) {
-            time[3] = parseInt(second / 60);
-            second %= 60;
-            }
-        if (second > 0) {
-            time[4] = second;
-            }
-        return time;
-    }
-</script>
-<script type="text/javascript" language="javascript">
+              </script>
+              <script type="text/javascript" language="javascript">
+                function setTime(createTimestamp) {
+                  // 获取当前时间戳（十位），并加上8小时的偏移量
+                  let currentTimestamp = Math.floor(Date.now() / 1000) + 8 * 60 * 60;
+
+                  // 计算时间差（秒）
+                  let elapsed = currentTimestamp - createTimestamp;
+
+                  // 转换为年、天、时、分、秒
+                  let years = Math.floor(elapsed / (365 * 24 * 60 * 60));
+                  elapsed %= (365 * 24 * 60 * 60);
+                  let days = Math.floor(elapsed / (24 * 60 * 60));
+                  elapsed %= (24 * 60 * 60);
+                  let hours = Math.floor(elapsed / (60 * 60));
+                  elapsed %= (60 * 60);
+                  let minutes = Math.floor(elapsed / 60);
+                  let seconds = elapsed % 60;
+
+                  // 更新页面内容
+                  let element = document.getElementById("htmer_time");
+                  if (element) {
+                    element.innerHTML = `${years}年${days}天${hours}时${minutes}分${seconds}秒`;
+                  }
+                }
+
+                // 设置初始建站时间戳（十位时间戳：2024-07-16 12:00:00 UTC）
+                let create_time = 1721102400;
+
+                // 每秒更新
+                setInterval(() => setTime(create_time), 1000);
+              </script>
+              <span>在风雨中度过<span id="htmer_time">...</span></span>
+              <!--运行时间代码结束位置-->
+            </div>
+<!--<script type="text/javascript" language="javascript">
     function setTime() {
         //下面是建站时间，月份需要-1
         var create_time = Math.round(new Date(Date.UTC(2024, 05, 06, 00, 20, 0)).getTime() / 1000);
@@ -382,7 +418,7 @@
     setInterval(setTime, 1000);
 </script>
 <span>在风雨中度过<span id="htmer_time"></span></span>
-<!--运行时间代码结束位置-->
+<--运行时间代码结束位置-->
 
 | <a href="https://www.360nenz.top/sitemap.txt" target="_blank">站点地图</a>
 </div>
